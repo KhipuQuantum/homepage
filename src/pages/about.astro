@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Khipu Quantum" description="About">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Khipu Quantum"
+				tagline="Gracias por visitarnos. A continuación, te invitamos a conocer más sobre nuestra empresa y nuestra trayectoria."
+			>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Nosotros</h2>
+				<div class="content">
+					<p>
+						En Khipu Quantum S.A.C, nos apasiona la innovación y estamos comprometidos en brindar 
+						soluciones tecnológicas vanguardistas que impulsen el crecimiento y la eficiencia de 
+						nuestros clientes. Nuestro equipo multidisciplinario de expertos combina conocimientos 
+						profundos en desarrollo de software, automatización de procesos, análisis de datos e 
+						investigación para ofrecer servicios integrales y personalizados.
+					</p>
+					<br/>
+					<p>
+						Nos enorgullece ser líderes en el desarrollo de soluciones de software a medida, diseñadas
+						para satisfacer las necesidades únicas de cada cliente. Nuestros ingenieros altamente 
+						capacitados trabajan en estrecha colaboración con ustedes para comprender sus desafíos y 
+						brindar soluciones innovadoras que optimicen sus operaciones y maximicen su productividad.
+					</p>
+					<br/>
+					<p>
+						Además, nos especializamos en la automatización de procesos, empleando las últimas 
+						tecnologías para streamlinear tareas repetitivas y eliminar ineficiencias. 
+						Nuestra experiencia en este campo nos permite identificar áreas de mejora y implementar 
+						soluciones automatizadas que ahorran tiempo y recursos, aumentando así la competitividad 
+						de nuestros clientes.
+					</p>
+					<br/>
+					<p>
+						Nuestro enfoque integral también incluye servicios de soporte técnico y análisis de datos. 
+						Nuestro equipo de expertos brinda asistencia técnica de primer nivel, garantizando el 
+						funcionamiento óptimo de sus sistemas y soluciones. Además, aprovechamos el poder del 
+						análisis de datos para brindar información valiosa que respalde la toma de decisiones 
+						estratégicas y impulse el crecimiento empresarial.
+					</p>
+					<br/>
+					<p>
+						En Khipu Quantum S.A.C., estamos comprometidos con la excelencia y la innovación continua.
+						Nuestro equipo de investigación y desarrollo trabaja incansablemente para mantenerse a la
+						vanguardia de las últimas tendencias y tecnologías, asegurando que nuestras soluciones 
+						sean siempre eficientes, escalables y adaptadas a las necesidades cambiantes del mercado.
+					</p>
+					<br/>
+					<p>
+						Únete a nosotros en este emocionante viaje hacia la transformación digital. Juntos, podemos
+						impulsar tu negocio hacia nuevas alturas y construir un futuro más brillante.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Ubicacion</h2>
+				<div class="content">
+					<p>Av. Floral 855-A, Puno - Peru</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">RUC</h2>
+				<div class="content">
+					<p>20611625686</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

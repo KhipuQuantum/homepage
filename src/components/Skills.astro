@@ -1,0 +1,78 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Desarrollo Software</h2>
+		<p>Creamos sitios web, sistemas de informacion a medida, para tus necesidades específicas. ¡Haz realidad tus ideas con nosotros!</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="twitch-logo" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Soporte Tecnico</h2>
+		<p>Servicios de asistencia técnica remota o presencial para resolver problemas de hardware, software, redes</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Consultoria Redes</h2>
+		<p>Asesoramiento en diseño, implementacion, optimizacion, seguridad y monitoreo de redes de computadoras</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="paper-plane-tilt" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Automatización de Procesos</h2>
+		<p>Implementación de soluciones de automatización para mejorar la eficiencia operativa y reducir los errores manuales.</p>
+	</div>
+	
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Consultoria Tecnologica</h2>
+		<p>Asesoramiento experto en estrategias de tecnología de la información (TI), arquitectura de sistemas, seguridad informática.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Investigación y Análisis de Datos</h2>
+		<p>Descubre insights que impulsan tu negocio, desentraña tus datos para revelar oportunidades ocultas y tendencias clave.</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
