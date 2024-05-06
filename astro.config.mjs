@@ -6,7 +6,6 @@ export default defineConfig({
         enabled: false
     },
     server: {
-        port: 4120,
-        host: true
+        port: 4120
     }
 });
