@@ -6,6 +6,8 @@ COPY . .
 
 RUN npm install
 
+RUN npm run build
+
 EXPOSE 4120
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "preview"]
