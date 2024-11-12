@@ -4,4 +4,4 @@ services:
   astro:
     build: .
     ports:
-      - "4120:4120"
+      - "4321:4321"

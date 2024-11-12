@@ -7,9 +7,5 @@ export default defineConfig({
     integrations: [sitemap()],
     devToolbar: {
         enabled: false
-    },
-    server: {
-        port: 4120,
-        host: true,
     }
 });
